@@ -7,7 +7,7 @@ const url = process.env.DATABASE;
 const Port = process.env.PORT;
 
 console.log(url,"keyyyyyyy");
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true ,strictQuery : true});
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
 
 var conn = mongoose.connection;
 
