@@ -1,8 +1,9 @@
 var mongoose = require("mongoose");
 const keys = require("../keys");
+const key = keys.mongoURI;
 
 console.log(keys.mongoURI,"keyyyyyyy");
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.key, { useNewUrlParser: true, useUnifiedTopology: true ,strictQuery : true});
 
 var conn = mongoose.connection;
 
