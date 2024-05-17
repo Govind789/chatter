@@ -26,7 +26,7 @@ require("./routes/data.routes")(app);
 let origin;
 
 if (process.env.NODE_ENV === "production") {
-  origin = "https://polar-bayou-51020.herokuapp.com";
+  origin = "https://chatter-1-igv0.onrender.com";
 } else {
   origin = "http://localhost:3000";
 }
