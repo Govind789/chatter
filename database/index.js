@@ -1,9 +1,12 @@
+const dotenv = require("dotenv");
 var mongoose = require("mongoose");
 const keys = require("../keys");
-const key = keys.mongoURI;
+const url = process.env.keys.mongoURI;
+
+dotenv.config({ path: "./config.env" });
 
 console.log(keys.mongoURI,"keyyyyyyy");
-mongoose.connect(process.env.key, { useNewUrlParser: true, useUnifiedTopology: true ,strictQuery : true});
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true ,strictQuery : true});
 
 var conn = mongoose.connection;
 
