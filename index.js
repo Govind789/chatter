@@ -10,7 +10,7 @@ var corsOptions = {
   origin: "http://localhost:3000",
 };
 const mongoose = require("mongoose");
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 const User = mongoose.model("User");
 const Chats = mongoose.model("Chats");
 
