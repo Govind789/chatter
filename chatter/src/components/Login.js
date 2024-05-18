@@ -13,7 +13,6 @@ function Login(props) {
   const [checked, setChecked] = useState(false)
 
   
-
   const wait = () => {
     props.setShowLogin(false)
   }
