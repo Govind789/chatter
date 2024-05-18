@@ -1,12 +1,13 @@
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 var mongoose = require("mongoose");
+const keys = require('../keys/dev.js'); 
 
-dotenv.config({ path: "./conf.env" });
+// dotenv.config({ path: "./conf.env" });
 
-const url = process.env.DATABASE;
+// const url = process.env.DATABASE;
 
-console.log(url,"keyyyyyyy");
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
+console.log(keys.mongoURI,"keyyyyyyy");
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true});
 
 var conn = mongoose.connection;
 
